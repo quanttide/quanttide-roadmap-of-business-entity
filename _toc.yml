@@ -1,63 +1,31 @@
 format: jb-book
 root: index.md
-chapters:
-  - file: businesses/README.md
-    sections:
-      - file: businesses/qtresearch.md
-      - file: businesses/qtclass.md
-      - file: businesses/qtcloud.md
-      - file: businesses/qtopen.md
-      - file: businesses/qtconsult.md
-  - file: products/README.md
-    sections:
+parts:
+  - caption: 商业模式
+    chapters:
+      - file: businesses/higher_education/README.md
+        sections:
+          - file: businesses/higher_education/research_services/README.md 
+          - file: businesses/higher_education/course_services/README.md
+            sections:
+              - file: businesses/higher_education/course_services/bootcamp.md
+      - file: businesses/cloud_computing/README.md
+      - file: businesses/enterprise_consulting/README.md
+  - caption: 产品与服务
+    chapters:
       - file: products/qtresearch/README.md
       - file: products/qtcloud/README.md
         sections:
           - file: products/qtcloud/qtcloud-data.md
-  - file: innovations/README.md
-    sections:
-      - file: innovations/technology/README.md
-        sections:
-          - file: innovations/technology/data_engineering.md
-          - file: innovations/technology/web_application.md
-          - file: innovations/technology/cloud_computing.md
-          - file: innovations/technology/aigc.md
-          - file: innovations/technology/trading.md
-          - file: innovations/technology/developer_tools.md
-          - file: innovations/technology/devops.md
-          - file: innovations/technology/design_language.md
-          - file: innovations/technology/digital_indentity.md
-      - file: innovations/management/README.md
-        sections:
-          - file: innovations/management/product_development.md
-          - file: innovations/management/project_management.md
-          - file: innovations/management/cooperation.md
-          - file: innovations/management/team_management.md
-          - file: innovations/management/digital_assets_management.md
-          - file: innovations/management/doc_management.md
-          - file: innovations/management/opensource_management.md
-          - file: innovations/management/client_support.md
-          - file: innovations/management/public_relations.md
-          - file: innovations/management/newmedia_management.md
-          - file: innovations/management/strategy_management.md
-          - file: innovations/management/human_management.md
-          - file: innovations/management/finance_management.md
-          - file: innovations/management/legal_management.md
-      - file: innovations/subjects/README.md
-        sections:
-          - file: innovations/subjects/research.md
-          - file: innovations/subjects/educations.md
-          - file: innovations/subjects/eco_model_building.md
-          - file: innovations/subjects/socialwork.md
-  - file: markets/README.md
-    sections:
+  - caption: 市场与商业化
+    chapters:
       - file: markets/operations.md
       - file: markets/pr.md
       - file: markets/brands.md
       - file: markets/marketing.md
       - file: markets/sales.md
-  - file: governance/README.md
-    sections:
+  - caption: 企业治理
+    chapters:
       - file: governance/strategies/README.md
       - file: governance/innovations/README.md
         sections:
@@ -70,21 +38,10 @@ chapters:
           - file: governance/risks/market_risks.md
           - file: governance/risks/finance_risks.md
           - file: governance/risks/management_risks.md
-  - file: alliance/README.md
-    sections:
-      - file: alliance/enterprise/README.md
+      - file: governance/culture/README.md
         sections:
-          - file: alliance/enterprise/business.md
-          - file: alliance/enterprise/development.md
-          - file: alliance/enterprise/management.md
-      - file: alliance/college/README.md
-        sections:
-          - file: alliance/college/academic.md
-          - file: alliance/college/education.md
-  - file: culture/README.md
-    sections:
-      - file: culture/missions.md
-      - file: culture/visions.md
-      - file: culture/characters.md
-      - file: culture/values.md
-      - file: culture/methods.md
+          - file: governance/culture/missions.md
+          - file: governance/culture/visions.md
+          - file: governance/culture/characters.md
+          - file: governance/culture/values.md
+          - file: governance/culture/methods.md
