@@ -26,6 +26,9 @@ parts:
       - file: markets/sales.md
   - caption: 企业治理
     chapters:
+      - file: governance/organizations/README.md
+        sections:
+          - file: governance/organizations/commitees.md
       - file: governance/strategies/README.md
       - file: governance/innovations/README.md
         sections:
