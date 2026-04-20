@@ -1,0 +1,50 @@
+format: jb-book
+root: index.md
+parts:
+  - caption: 商业模式
+    chapters:
+      - file: businesses/higher_education/README.md
+        sections:
+          - file: businesses/higher_education/research_services/README.md 
+          - file: businesses/higher_education/course_services/README.md
+            sections:
+              - file: businesses/higher_education/course_services/bootcamp.md
+      - file: businesses/cloud_computing/README.md
+      - file: businesses/enterprise_consulting/README.md
+  - caption: 产品与服务
+    chapters:
+      - file: products/qtresearch/README.md
+      - file: products/qtcloud/README.md
+        sections:
+          - file: products/qtcloud/qtcloud-data.md
+  - caption: 市场与商业化
+    chapters:
+      - file: markets/operations.md
+      - file: markets/pr.md
+      - file: markets/brands.md
+      - file: markets/marketing.md
+      - file: markets/sales.md
+  - caption: 企业治理
+    chapters:
+      - file: governance/organizations/README.md
+        sections:
+          - file: governance/organizations/commitees.md
+      - file: governance/strategies/README.md
+      - file: governance/innovations/README.md
+        sections:
+          - file: governance/innovations/products.md
+          - file: governance/innovations/courses.md
+      - file: governance/talents/README.md
+      - file: governance/risks/README.md
+        sections:
+          - file: governance/risks/tech_risks.md
+          - file: governance/risks/market_risks.md
+          - file: governance/risks/finance_risks.md
+          - file: governance/risks/management_risks.md
+      - file: governance/culture/README.md
+        sections:
+          - file: governance/culture/missions.md
+          - file: governance/culture/visions.md
+          - file: governance/culture/characters.md
+          - file: governance/culture/values.md
+          - file: governance/culture/methods.md
