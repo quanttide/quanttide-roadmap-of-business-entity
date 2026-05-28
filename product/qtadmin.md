@@ -1,4 +1,4 @@
-# QtCloud HR — 集成蓝图
+# 量潮管理后台集成蓝图
 
 > 目标：将 `quanttide-hr-toolkit`的`packages/fastapi` 库集成到 `qtadmin`的 `provider` 应用中。
 
