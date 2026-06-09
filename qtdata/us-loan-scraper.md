@@ -1,22 +1,5 @@
 # 美国贷款合同爬虫蓝图
 
-## 当前状态
-
-仓库：`quanttide-tech/us-loan-scraper`（10 commits, 最后推送 2025-12-10）
-
-架构：
-
-```
-py-sec-edgar (数据下载器: ryansmccoy/py-sec-edgar)
-    ↓ 批量下载 8-K 文件
-us-loan-scraper (处理流水线)
-    ├── src/main.py      # 主流程：遍历 CIK → Filing → 附件 → 提取供应链句子
-    ├── src/settings.py  # 关键词规则、噪音清洗规则、路径
-    └── src/utils.py     # 文本提取、分句、关键词匹配、指纹去重
-    ↓
-supply_chain_sentences.csv  (最终输出)
-```
-
 ### 已实现
 
 - ✅ 全量 8-K 文件下载（基于 py-sec-edgar）
@@ -43,7 +26,7 @@ supply_chain_sentences.csv  (最终输出)
 | 典型条款 | "Interest Rate", "Maturity Date", "Events of Default" |
 | 排除特征 | 不含 "Indenture"、"Notes" 等债券特征词 |
 
-建议改造：在 `process_attachment_file()` 中增加前置分类判断——是 Credit Agreement 才进入后续提取流程，否则跳过。
+建议改造：增加前置分类判断——是 Credit Agreement 才进入后续提取流程，否则跳过。
 
 ## 性能优化
 
