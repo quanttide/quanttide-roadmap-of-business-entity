@@ -1,18 +1,8 @@
 # 美国贷款合同爬虫蓝图
 
-### 已实现
-
-- ✅ 全量 8-K 文件下载（基于 py-sec-edgar）
-- ✅ 附件文本提取（BeautifulSoup HTML/XML 解析）
-- ✅ 关键词预筛选（loan/credit/agreement/indenture）
-- ✅ 生效日期提取
-- ✅ 供应链句子识别（核心词 + 实体词 & 运营词 组合匹配 + 6 类噪音过滤）
-- ✅ CIK 级 MD5 指纹去重
-- ✅ 流式写入 CSV + 定时 GC 缓解内存压力
-
 ## 模式识别
 
-### 难点：识别 Credit Agreement 文件
+难点：识别 Credit Agreement 文件
 
 当前问题：所有匹配 loan/credit 关键词的 8-K 附件都被处理，未做 Credit Agreement 分类。
 
@@ -30,7 +20,7 @@
 
 ## 性能优化
 
-### 难点：批量下载爆内存
+难点：批量下载爆内存
 
 当前措施：
 
@@ -47,3 +37,10 @@
 - 附件文本提取改用流式/分块读取
 - 下载与处理分离：先下载再分批处理
 - 使用内存映射文件处理超大型 PDF
+
+## 参考资料
+
+- **数据下载器**：[ryansmccoy/py-sec-edgar](https://github.com/ryansmccoy/py-sec-edgar) — SEC EDGAR 专业下载器，支持 10-K/10-Q/8-K 等表单类型的批量下载与提取
+- **项目仓库**：[quanttide-tech/us-loan-scraper](https://github.com/quanttide-tech/us-loan-scraper) — 本项目代码仓库
+- **SEC EDGAR 主页**：[https://www.sec.gov/edgar](https://www.sec.gov/edgar) — 美国证监会 EDGAR 数据库入口
+- **SEC EDGAR 开发者指南**：[https://www.sec.gov/developer](https://www.sec.gov/developer) — SEC 数据访问规范与 Fair Access 指南
