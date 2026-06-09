@@ -41,6 +41,5 @@
 ## 参考资料
 
 - **数据下载器**：[ryansmccoy/py-sec-edgar](https://github.com/ryansmccoy/py-sec-edgar) — SEC EDGAR 专业下载器，支持 10-K/10-Q/8-K 等表单类型的批量下载与提取
-- **项目仓库**：[quanttide-tech/us-loan-scraper](https://github.com/quanttide-tech/us-loan-scraper) — 本项目代码仓库
 - **SEC EDGAR 主页**：[https://www.sec.gov/edgar](https://www.sec.gov/edgar) — 美国证监会 EDGAR 数据库入口
 - **SEC EDGAR 开发者指南**：[https://www.sec.gov/developer](https://www.sec.gov/developer) — SEC 数据访问规范与 Fair Access 指南
