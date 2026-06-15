@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.1.0] - 2026-06-15
+
+### Changed
+
+- 美国贷款合同爬虫蓝图性能优化章节升级：三风险拆解 + 五条已验证优化方案 + 三阶段实施策略
+
 ## [0.0.2] - 2026-04-30
 
 ### Added
