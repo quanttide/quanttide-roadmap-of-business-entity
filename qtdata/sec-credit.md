@@ -131,6 +131,46 @@
 | Ford Credit Auto Lease Trust 8-K EX-4.1 | INDENTURE | 负例（Indenture） | 标题 INDENTURE；主体为 Issuer 和 Indenture Trustee；Article II 主题为 The Notes |
 
 ## 实现方案
+基于蓝图中的证据驱动原则，本模块将模式识别固化为独立、可测试的三阶段混合分类器（实际实现参见 PR 新增的 `exhibit_classifier.py`）：
+
+#### Stage 1: 证据抽取器（EvidenceExtractor）
+纯规则抽取，不进行判断。提取五类证据：
+
+| 证据类别 | 抽取内容 | 方法示例 |
+| :--- | :--- | :--- |
+| title_evidence | 文件标题/描述是否命中子类型关键词 | 正则：`Amendment No. \d+`、`Extension Agreement`、`Consent Letter` |
+| role_evidence | 合同角色出现列表 | 扫描 `Borrower`、`Lender`、`Administrative Agent`、`Issuer`、`Trustee` 等 |
+| section_evidence | Article II 的标题主题 | 查找 `Article II` 后的标题，识别 `The Loans` 还是 `The Notes` |
+| term_evidence | 关键条款或短语 | 匹配 `Maturity Date`、`Commitment`、`Indenture Trustee` 等 |
+| negative_evidence | 强负特征组合 | 仅当 `INDENTURE` + `Indenture Trustee` + `The Notes` 三者同时出现时触发 |
+
+#### Stage 2: LLM 判断器（LLMClassifier）
+- 输入：`text_head` 前 32,000 字符 + 结构化的 `EvidenceBag` 摘要
+- Prompt 设计：Few-shot，教 LLM 区分 `credit_agreement_original` / `amendment` / `extension` / `related_letter` / `indenture_or_notes`
+- 输出：JSON，含 `document_type`、`confidence`、`reasoning`
+- 容错：若 LLM 调用失败或返回格式错误，自动降级为纯规则模式（置信度 0.60），写入 `fallback.log`
+
+#### Stage 3: 规则仲裁器（RuleArbiter）
+强正/强负规则硬性覆盖，修正 LLM 误判：
+
+| 优先级 | 规则 | 动作 |
+| :--- | :--- | :--- |
+| 最高 | `exhibit_type` 为空或描述含 "summary" | 强制为 `eight_k_summary`，禁止进入字段抽取 |
+| 最高 | 检测到 `INDENTURE` + `Indenture Trustee` + `The Notes` | 强制为 `indenture_or_notes`，置信度 0.98 |
+| 次高 | 标题含 `Extension` + 出现 `Borrower` + 无 `related_letter` 特征 | 强制为 `credit_agreement_extension` |
+| 默认 | 无规则触发 | 保留 LLM 判断结果 |
+
+> 冲突记录：当 LLM 与规则结论不一致时，以规则为准，同时将样本写入 `conflicts.log`，供后续人工复核与规则迭代。
+
+#### 验收标准（对应蓝图样本）
+
+| 样本 | 预期结果 |
+| :--- | :--- |
+| ENVIRI Corp 8-K / Goodyear 10-Q | `credit_agreement_amendment` |
+| CenterPoint Energy 8-K | `credit_agreement_extension` |
+| OGE Energy 8-K | `credit_agreement_related_letter`（且 `skip_extraction: true`） |
+| Ford Credit Auto Lease Trust 8-K | `indenture_or_notes`（强负特征覆盖） |
+| 8-K 主文摘要 | `eight_k_summary`（禁止进入字段抽取管道） |
 
 ### Step 1：解析 Exhibit
 
