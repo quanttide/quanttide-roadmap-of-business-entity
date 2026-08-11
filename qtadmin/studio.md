@@ -6,24 +6,27 @@ Studio 的目标是让治理思想「以系统化的方式被展示和执行」�
 
 - 业务屏残留：org（组织）、qtconsult（咨询）、recruitment（招聘）三个历史页面
 - router 仍引用已剥离的业务域包（dashboard、think、qtclass），存在死引用风险
-- 治理可视化空白：asset、knowl、delib、strategy 均无页面
+- 治理可视化空白：asset、knowl、delib、strategy、执行评审均无页面
 
 ## 路线
 
-### 近期：清理与 asset 起步
+### 近期：清理与起步
 
 - 清理 router 死引用，确认可构建
-- 从 asset 起步：资产治理可视化（archive / status / quality），读取 CLI 数据文件实现双端共享
+- asset 起步：资产治理可视化（archive / status / quality），读取 CLI 数据文件实现双端共享
+- 评审闭环 MVP 可视化：角色槽位分配、评审节点、评审留痕（对照执行环节演化的近期）
 
-### 中期：知识链路可视化
+### 中期：质量飞轮可视化
 
 - knowl 链路展示：acquire / extract / summary，状态承载（settled / evolving / draft）可视化
 - 政策知识视图：政策列表、状态、主题总结的公开化展示
+- 评审质量视图：打回原因聚类、标准库展示（摩擦生成标准）——评审即制度修订的可视化
 
-### 远期：支柱页面
+### 远期：支柱与权威
 
 - delib 议事屏：议事记录与决策留痕
 - strategy 战略屏：方向、张力、假设库
+- 责任链看板：分配 → 执行 → 评审 → 负责的全链路视图与进度广播
 
 ## 原则
 
