@@ -7,26 +7,29 @@
 ```
 roadmap/
 ├── index.md          # 蓝图入口——不承载具体主题细节
-├── intro/            # 公司级层：跨领域主题（公共事实单一来源）
 ├── {领域}/           # 如 qtclass/ qtrecurit/ qtcloud/ —— 领域各自路线图
 │   ├── index.md      # 领域整体路线图（全貌）
 │   └── {专项}.md     # 领域内专项（如 training-base.md 实训基地）
 └── AGENTS.md
 ```
 
+> intro/（公司级层）已停用：跨领域主题全景迁至归属领域的意图仓库（实训基地 → quanttide-org/data/intention/training-base.md）。
+
 ## 放置规则（新增/移动主题时）
 
 | 主题性质 | 放置位置 |
 |---------|---------|
-| **跨领域主题**（串联多个领域，如实训基地） | `intro/{name}.md` 定义全景 |
+| **跨领域主题**（串联多个领域） | 归属领域的意图仓库定义全景 |
 | 领域内整体规划 | `{领域}/index.md` |
-| 领域内专项（对应某跨领域主题的领域侧） | `{领域}/{name}.md`（与 intro 同名同构） |
+| 领域内专项（对应某跨领域主题的领域侧） | `{领域}/{name}.md`（与意图仓库全景同名同构） |
 
 ## 引用与重复规则
 
-1. **公共事实单一来源**：跨领域全景只在 intro/ 写一次
-2. **领域文件只讲领域侧**：qtclass/training-base.md 只写课堂路径；qtrecurit/training-base.md 只写招聘路径——不复制 intro 内容，用相对链接引用（`intro/training-base.md`）
+1. **公共事实单一来源**：跨领域全景只在归属领域的意图仓库写一次
+2. **领域文件只讲领域侧**：qtclass/training-base.md 只写课堂路径；qtrecurit/training-base.md 只写招聘路径——不复制全景内容，引用意图仓库的全景文件
 3. **同名即同实体**：多个领域目录下的同名文件（training-base.md）是同一实体的不同视角——修改时保持结构对称
+
+> **2026-08-29 迁移**：intro/training-base.md（实训基地公司级全景）已迁至 `domains/quanttide-org/data/intention/training-base.md`（组织管理意图仓库）——实训基地归属组织管理领域，公司级全景在那里维护。qtclass/qtrecurit 的领域侧文件保留在本仓库，引用指向新位置。
 
 ## 维护原则
 

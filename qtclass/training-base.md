@@ -1,6 +1,6 @@
 # 实训基地路线图（课堂侧）
 
-课堂视角：实训基地在量潮课堂中的角色。公司级全景见 `intro/training-base.md`（双路径枢纽——本文件只讲课堂路径）。
+课堂视角：实训基地在量潮课堂中的角色。公司级全景见 quanttide-org intention 仓库的 `training-base.md`（domains/quanttide-org/data/intention/）（双路径枢纽——本文件只讲课堂路径）。
 
 ## 课堂路径（路径 A：课堂 → 招聘）
 

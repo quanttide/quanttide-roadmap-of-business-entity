@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Removed
+- intro/training-base.md（实训基地公司级全景）迁至 quanttide-org intention 仓库（domains/quanttide-org/data/intention/training-base.md）——实训基地归属组织管理领域；qtclass/qtrecurit 领域侧文件保留，引用指向新位置
+
+### Changed
+- AGENTS.md/README.md：intro（公司级层）停用，跨领域主题全景改在归属领域的意图仓库维护
+
 ## [0.1.1] - 2026-06-26
 
 ### Changed

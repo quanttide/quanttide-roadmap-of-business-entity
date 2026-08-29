@@ -1,6 +1,6 @@
 # 实训基地路线图（招聘侧）
 
-招聘视角：实训基地在招聘中的角色。公司级全景见 `intro/training-base.md`（双路径枢纽——本文件只讲招聘路径）。
+招聘视角：实训基地在招聘中的角色。公司级全景见 quanttide-org intention 仓库的 `training-base.md`（domains/quanttide-org/data/intention/）（双路径枢纽——本文件只讲招聘路径）。
 
 招聘已并入课堂体系：实训基地是招聘的承载。招聘解决人才培养问题，高度情境化、与公司绑定；教学更通用朴实，两者管理上分开、内部统一标准。
 
