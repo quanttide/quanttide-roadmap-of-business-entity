@@ -12,30 +12,15 @@
 
 产品承担三项服务职责：提供规则配置界面，承载门槛参数、问卷题目、评审结论、代金券规则；记录每次变更并归档；不假设产品是基地唯一的流程载体，允许流程定义外置，或由基地自有仓库维护。
 
-**代码归公司，规则归基地。**
-
 ## 技术方案
 
 实训系统作为独立模块新增，课程系统保持不变。服务端维护一张状态表，状态表即流程定义：流程变更即表数据变更，界面随之自动更新。每次状态迁移对应一个接口，由服务端守卫，不允许绕过。
-
-学员身份绑定 studio 登录账号，姓名仅作显示。
-
-```text
-Studio (Flutter 0.2.0)                Provider (Go)
-┌──────────────────────┐              ┌──────────────────────┐
-│ 课程系统（现有，不动）   │              │ course：课程数据      │
-│  首页/列表/播放/立项    │              │ learn：学习云代理     │
-│──────────────────────│              │──────────────────────│
-│ 实训系统（新增）        │────API────▶ │ 旅程状态机 + 持久化    │
-│  旅程时间线 + 节点面板  │              │                      │
-└──────────────────────┘              └──────────────────────┘
-```
 
 ## 界面构成
 
 学习报名页为旅程时间线，并展示当前节点可用动作，信息架构平移自实验室工作台；另设问卷页、任务页、交付页。评审结果在旅程面板只读展示，通过或打回并附原因，评审录入属学习云。
 
-## 数据模型的五项要求
+## 数据模型
 
 以下事项已在真实业务中发生，数据模型若无法承载，业务即无法进入系统。
 
@@ -50,14 +35,3 @@ Studio (Flutter 0.2.0)                Provider (Go)
 ## 开发顺序
 
 先固化数据结构——旅程状态、门槛配置、任务定义——再由 AI 生成界面与接口。反之，各端独立实现将迅速偏离；课程系统、实训系统、Provider 三处已出现此迹象。
-
-## 依据
-
-以下为各条方向的依据，重审时可回查。
-
-- [institution-generation-path](../../../insight/qtclass/institution-generation-path.md) — 规则由基地决定
-- [demand-outpacing-capacity](../../../insight/qtcloud/demand-outpacing-capacity.md) — 订单节奏牵引培养节奏
-- [testing-culture](../../../insight/qtclass/testing-culture.md) — 交付前测试
-- [willingness-as-currency](../../../insight/qtclass/willingness-as-currency.md) — 报名即意愿确认
-- [outcome-attribution](../../../insight/qtclass/outcome-attribution.md) — 成果归因
-- [ai-maintainable-radius](../../../insight/qtcloud/ai-maintainable-radius.md) — 数据结构先于界面
