@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- qtconsult/product/studio.md：量潮咨询 Studio 产品路线图——视角从顾问作业台转向主体的板
+
 ### Removed
 - intro/training-base.md（实训基地公司级全景）迁至 quanttide-org intention 仓库（domains/quanttide-org/data/intention/training-base.md）——实训基地归属组织管理领域；qtclass/qtrecurit 领域侧文件保留，引用指向新位置
 
