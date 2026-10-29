@@ -7,7 +7,7 @@
 ```
 roadmap/
 ├── index.md          # 蓝图入口——不承载具体主题细节
-├── {领域}/           # 如 qtclass/ qtrecurit/ qtcloud/ —— 领域各自路线图
+├── {领域}/           # 如 qtclass/ qtcloud/ —— 领域各自路线图
 │   ├── index.md      # 领域整体路线图（全貌）
 │   └── {专项}.md     # 领域内专项（如 training-base.md 实训基地）
 └── AGENTS.md
@@ -26,10 +26,10 @@ roadmap/
 ## 引用与重复规则
 
 1. **公共事实单一来源**：跨领域全景只在归属领域的意图仓库写一次
-2. **领域文件只讲领域侧**：qtclass/training-base.md 只写课堂路径；qtrecurit/training-base.md 只写招聘路径——不复制全景内容，引用意图仓库的全景文件
+2. **领域文件只讲领域侧**：qtclass/training-base.md 只写课堂路径——不复制全景内容，引用意图仓库的全景文件
 3. **同名即同实体**：多个领域目录下的同名文件（training-base.md）是同一实体的不同视角——修改时保持结构对称
 
-> **2026-08-29 迁移**：intro/training-base.md（实训基地公司级全景）已迁至 `domains/quanttide-org/data/intention/training-base.md`（组织管理意图仓库）——实训基地归属组织管理领域，公司级全景在那里维护。qtclass/qtrecurit 的领域侧文件保留在本仓库，引用指向新位置。
+> **2026-08-29 迁移**：intro/training-base.md（实训基地公司级全景）已迁至 `domains/quanttide-org/data/intention/training-base.md`（组织管理意图仓库）——实训基地归属组织管理领域，公司级全景在那里维护。qtclass 的领域侧文件保留在本仓库，引用指向新位置；qtrecurit 的路线图已整体迁至量潮创新联盟路线图仓（quanttide-roadmap-of-innovation-alliance）。
 
 ## 维护原则
 

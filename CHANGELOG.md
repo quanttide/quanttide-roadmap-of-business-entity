@@ -43,3 +43,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - 初始化项目
 - 添加组织架构文档
+- 移除 qtrecurit 招聘路线图：整体迁移至量潮创新联盟路线图仓（quanttide-roadmap-of-innovation-alliance），README/AGENTS 引用同步修正
