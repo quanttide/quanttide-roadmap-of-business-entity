@@ -5,7 +5,7 @@
 | Scope | 产品面 | 路线图 |
 |-------|--------|--------|
 | site | 展示与招生：课程体系、价格（询价） | [site.md](site.md) |
-| studio | 教学设计工作台（单用户）：互动节点设计、脚手架、任务书生产线——本体是 v0.1 互动编排引擎，节点载荷暂为文档 | [studio.md](studio.md) |
+| studio | 教学设计工作台（单用户）：大作业（Assignment）设计与解体、脚手架、任务书生产线——本体是 v0.1 互动编排引擎，节点载荷暂为文档 | [studio.md](studio.md) |
 | lite | 学员面：任务系统，课程与实训都是任务序列 | [lite.md](lite.md) |
 | provider | 数据面：任务模型、状态表、回写通道 | [provider.md](provider.md) |
 | cli | 命令面：骨架 | [cli.md](cli.md) |
