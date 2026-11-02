@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - qtconsult/product/studio.md：量潮咨询 Studio 产品路线图——视角从顾问作业台转向主体的板
 
 ### Changed
-- qtclass/product/studio.md：教学创作空间提为置顶优先方向（源自洞察仓 studio.md，新思路优先）——五对象（Brief/分解树/脚手架库/教学动作元数据/评审复盘）与不做清单，与现场待办同线推进不设先后门槛；原待办改标 v0.2 执行清单
+- qtclass/product/studio.md 重写：studio 转向单用户教学设计工作台——核心判断「本体是 v0.1 互动编排引擎，节点载荷暂为文档非视频」；教学创作空间保持优先（新思路优先）；学员交互与客户面七项退场附精简理由；原待办改标现场执行。qtclass/index.md 近期交付与 product/index.md 总览表同步
 - qtclass/product/site.md：口径对齐 v0.1.2 实况——训练营不并入课程列表（所有课程都是实践课，单一列表）、价格只留三档服务模式、学习页下线；同步修正 scope 表“报名”表述
 - 新增 qtclass/product/lite.md 篇：Web 首切片落地（三页 + 静态契约 + 任务书首迁），v0.1 剩余只留登录与提交通道；site 篇口径同步（任务书已迁出）
 - qtclass/product/index.md：双入口改三端表述（lite 任务系统/教学客户面 studio/展示 site），评审录入改仓内自持注记
