@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+- qtclass/product/site.md：口径对齐 v0.1.2 实况——训练营不并入课程列表（所有课程都是实践课，单一列表）、价格只留三档服务模式、学习页下线；同步修正 scope 表“报名”表述
+
 ### Added
 - qtclass/product/：产品路线图按 scope 分篇——site/studio/lite/provider/cli 各一篇，index 收为总览与共同原则（规则不写入代码、数据结构先行）
 - qtconsult/product/studio.md：量潮咨询 Studio 产品路线图——视角从顾问作业台转向主体的板

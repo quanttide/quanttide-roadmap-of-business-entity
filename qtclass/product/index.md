@@ -4,7 +4,7 @@
 
 | Scope | 产品面 | 路线图 |
 |-------|--------|--------|
-| site | 展示与招生：课程体系、价格、报名 | [site.md](site.md) |
+| site | 展示与招生：课程体系、价格（询价） | [site.md](site.md) |
 | studio | 教学与客户面：派任务、批改、客户看交付 | [studio.md](studio.md) |
 | lite | 学员面：任务系统，课程与实训都是任务序列 | [lite.md](lite.md) |
 | provider | 数据面：任务模型、状态表、回写通道 | [provider.md](provider.md) |
