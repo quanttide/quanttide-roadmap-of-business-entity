@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - qtconsult/product/studio.md：量潮咨询 Studio 产品路线图——视角从顾问作业台转向主体的板
 
 ### Changed
+- qtclass/product/studio.md 结构重写（用户裁决）：分解树 → **Solution + SolutionStep**——答案先立、路随答案走；Solution 三字段孪生（参考答案非标准答案、可选）；步骤单元一层不嵌套，`after` 前置边组 DAG（多入度是树给不了的），判断标准与注解全进 content；教学动作挂件砍除、三档 kind 砍除；核心判断与脚手架分工同步
 - qtclass/product/studio.md 与索引：Brief 更名 **Assignment（大作业）**（命名由用户定），studio 定位补齐「大作业的解体思路」——先立靶子解体才有对象；数据契约随后由用户定为三字段 `id`(uuid) / `title` / `content`（content 当前 Markdown 长文本、预留视频等格式），原四问不再作结构化字段；洞察归档保留原词
 - qtclass/product/studio.md 重写：studio 转向单用户教学设计工作台——核心判断「本体是 v0.1 互动编排引擎，节点载荷暂为文档非视频」；教学创作空间保持优先（新思路优先）；学员交互与客户面七项退场附精简理由；原待办改标现场执行。qtclass/index.md 近期交付与 product/index.md 总览表同步
 - qtclass/product/site.md：口径对齐 v0.1.2 实况——训练营不并入课程列表（所有课程都是实践课，单一列表）、价格只留三档服务模式、学习页下线；同步修正 scope 表“报名”表述
