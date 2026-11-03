@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### Added
+- qtclass/product/auth-pay.md：量潮课堂接入账号与支付系统设计（qtcloud-auth JWT 校验、qtcloud-pay 钱包与订单代理、分阶段落地），自 `~/下载` 迁入并按格式标准整理；product/index.md 加入口链接
 - qtclass/product/：产品路线图按 scope 分篇——site/studio/lite/provider/cli 各一篇，index 收为总览与共同原则（规则不写入代码、数据结构先行）
 - qtconsult/product/studio.md：量潮咨询 Studio 产品路线图——视角从顾问作业台转向主体的板
 
