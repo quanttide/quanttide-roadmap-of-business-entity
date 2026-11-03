@@ -10,9 +10,9 @@ studio 的资产是**互动引擎**——节点带交互与选择的编排模型
 
 **新思路优先**：主方向不是"功能更多的工作台"，而是把隐性教学经验显性化的创作空间——装教学思路本身：为什么这个任务要这么拆、每一步的判断标准是什么、做到什么程度算过关、卡住时往哪想。
 
-- [ ] Assignment（大作业）：数据契约三字段——`id`（uuid）/ `title` / `content`；content 当前装 Markdown 长文本（任务书全文），未来拓展视频等格式；解体与步骤按 id 配对。类落 `quanttide-tech-toolkit` 的 `dart/course`（BLoC 架构），studio 引包接入
-- [ ] Solution（参考答案）：三字段孪生，content 装范例交付与正例反例对照——把及格线具象化；定框**参考答案不是标准答案**（与「自由发挥 + 陌生人检验」验收兼容），可选、一作业一档；类已落 toolkit 同仓
-- [ ] SolutionStep（步骤单元）：Solution 下**一层不嵌套**的单元，三字段 + `after`（前置边）组成 DAG——投影即 lite 的过门槛（完成前置解锁本步）；判断标准、检查点、"老师为什么这么安排"全部写进 content，单元自足（注解不设模型）。模型已落 `quanttide-tech-toolkit` 的 `dart/course`
+- [ ] Assignment（大作业）：数据契约三字段——`id`（uuid）/ `title` / `content`；content 当前装 Markdown 长文本（任务书全文），未来拓展视频等格式；解体与步骤按 id 配对。**独立实现于 studio `lib/models/`**——toolkit 暂不引入，随业务迭代，稳定后固定回 `quanttide-tech-toolkit` 的 `dart/course`
+- [ ] Solution（参考答案）：三字段孪生，content 装范例交付与正例反例对照——把及格线具象化；定框**参考答案不是标准答案**（与「自由发挥 + 陌生人检验」验收兼容），可选、一作业一档；独立实现于 studio `lib/models/`（同上口径）
+- [ ] SolutionStep（步骤单元）：Solution 下**一层不嵌套**的单元，三字段 + `after`（前置边）组成 DAG——投影即 lite 的过门槛（完成前置解锁本步）；判断标准、检查点、"老师为什么这么安排"全部写进 content，单元自足（注解不设模型）。独立实现于 studio `lib/models/`（同上口径）
 - [ ] 脚手架库：前置思考题、常见坑点、反思触发器——跨大作业复用的教学经验组件（示例反例位由 Solution 承接）
 - [ ] 修订回环（任务书生产线）：新序列首任务 = 任务书修订；AI 预筛 diff，教师合稿回灌仓内任务书、按修订重排任务序列——教研嵌在任务流里，不设独立仪式
 
